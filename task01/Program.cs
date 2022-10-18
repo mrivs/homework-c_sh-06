@@ -6,7 +6,7 @@
 1, -7, 567, 89, 223-> 3
 /*/
 
-int [] array = PrintStrAndGetArrayOfDouble("Введите числа (через запятую)");
+int [] array = PrintStrAndGetArrayOfInt("Введите числа (через запятую)");
 Console.WriteLine(PositiveNumbers(array));
 
 int PositiveNumbers(int[] array)
@@ -19,7 +19,7 @@ int PositiveNumbers(int[] array)
     return k;
 }
 
-int[] PrintStrAndGetArrayOfDouble(string message) // пишем сообщение и задаем массив вещественных чисел
+int[] PrintStrAndGetArrayOfInt(string message) // пишем сообщение и задаем массив вещественных чисел
 {
     Console.WriteLine(message);
 
