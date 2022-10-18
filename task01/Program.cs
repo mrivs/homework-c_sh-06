@@ -6,10 +6,10 @@
 1, -7, 567, 89, 223-> 3
 /*/
 
-double[] array = PrintStrAndGetArrayOfDouble("Введите числа (через пробел)");
+int [] array = PrintStrAndGetArrayOfDouble("Введите числа (через запятую)");
 Console.WriteLine(PositiveNumbers(array));
 
-int PositiveNumbers(double[] array)
+int PositiveNumbers(int[] array)
 {
     int k = 0;
     for (int i = 0; i < array.Length; i++)
@@ -19,17 +19,17 @@ int PositiveNumbers(double[] array)
     return k;
 }
 
-double[] PrintStrAndGetArrayOfDouble(string message) // пишем сообщение и задаем массив вещественных чисел
+int[] PrintStrAndGetArrayOfDouble(string message) // пишем сообщение и задаем массив вещественных чисел
 {
     Console.WriteLine(message);
 
     string ArrayInOneString = (Console.ReadLine());
-    string[] ArrayOfString = ArrayInOneString.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-    double[] ArrayOfDouble = new double[ArrayOfString.Length];
+    string[] ArrayOfString = ArrayInOneString.Split(",", StringSplitOptions.RemoveEmptyEntries);
+    int[] ArrayOfInt = new int[ArrayOfString.Length];
 
-    for (int i = 0; i < ArrayOfDouble.Length; i++)
+    for (int i = 0; i < ArrayOfInt.Length; i++)
     {
-        ArrayOfDouble[i] = double.Parse(ArrayOfString[i]);
+        ArrayOfInt[i] = int.Parse(ArrayOfString[i]);
     }
-    return ArrayOfDouble;
+    return ArrayOfInt;
 }
